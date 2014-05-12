@@ -14,4 +14,3 @@ FILES=: 0 : 0
 history.txt
 expat.ijs
 )
-PLATFORMS=: 'linux win darwin android'
