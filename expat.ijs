@@ -9,15 +9,12 @@ if. UNAME-:'Linux' do.
 elseif. UNAME-:'Android' do.
   LIB=: 'libexpat.so'
 elseif. UNAME-:'Darwin' do.
-  if. -.fexist LIB=: '/usr/lib/libexpat.dylib' do.
-    LIB=: 'libexpat.dylib'
+  LIB=: 'libexpat.dylib'
+  if. fexist t=. '/opt/local/lib/libexpat.dylib' do.
+    LIB=: t
   end.
 elseif. UNAME-:'Win' do.
-  if. fexist f=. jpath '~install/gtk/bin/libexpat-1.dll' do.
-    LIB=: '"', '"',~ f
-  else.
-    LIB=: 'libexpat-1.dll'
-  end.
+  LIB=: 'libexpat-1.dll'
 end.
 )
 
@@ -118,3 +115,18 @@ splitbs=: (0;(0 10#:10*".;._2]0 :0);(a.e.hexchars)+(2*a.='\')+3*a.e.'Uu')&;:
  1.2  3.0  2.2 1.2
 )
 evalbs=: [:; [:subst2 [:subst6 splitbs^:(*@#)
+install=: 3 : 0
+if. -. IFWIN do. return. end.
+require 'pacman'
+for_lib. <;._1 ' libexpat-1.dll' do.
+  'rc p'=. httpget_jpacman_ 'http://www.jsoftware.com/download/', z=. 'winlib/',(IF64{::'x86';'x64'),'/',,>lib
+  if. rc do.
+    smoutput 'unable to download: ',z return.
+  end.
+  (<jpath'~bin/',>lib) 1!:2~ 1!:1 <p
+  1!:55 ::0: <p
+end.
+smoutput 'done'
+EMPTY
+)
+

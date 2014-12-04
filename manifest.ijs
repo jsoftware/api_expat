@@ -6,11 +6,12 @@ DESCRIPTION=: 0 : 0
 libexpat interface
 )
 
-VERSION=: '1.0.3'
+VERSION=: '1.0.4'
 
-RELEASE=: 'j802 j803'
+RELEASE=: 'j803'
 
 FILES=: 0 : 0
 history.txt
 expat.ijs
+readme.txt
 )
