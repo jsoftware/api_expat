@@ -51,4 +51,5 @@ expat_parse_xmlx [v]   call during expat_parse_xml
 Example
 -------
 
-see test/test1.ijs
+test/test0.ijs   just smoutput inside callbacks
+test/test1.ijs   parse android layout resource

@@ -42,7 +42,7 @@ end.
 0;elements;< }.@(}.~ i.&'/')&.> idnames
 )
 
-'rc el id'=. 1 expat_parse_xml 1!:1 < jpath '~Public/api/expat/test/test.xml'
+'rc el id'=. 1 expat_parse_xml 1!:1 < jpath '~addons/api/expat/test/test.xml'
 smoutput rc
 smoutput el
 smoutput id
