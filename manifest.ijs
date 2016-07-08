@@ -8,9 +8,9 @@ libexpat interface
 see readme.txt
 )
 
-VERSION=: '1.0.7'
+VERSION=: '1.0.8'
 
-RELEASE=: 'j803 j804'
+RELEASE=: 'j803 j804 j805'
 
 FILES=: 0 : 0
 history.txt
