@@ -1,5 +1,5 @@
 3 : 0''
-if. UNAME-:'Linux' do.
+if. (<UNAME)e.'Linux';'FreeBSD';'OpenBSD' do.
   LIB=: 'libexpat.so.1'
 elseif. UNAME-:'Android' do.
   LIB=: 'libexpat.so'
